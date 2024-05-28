@@ -2,7 +2,7 @@
 
 Esse projeto teve como intuito realizar a conversão de arquivos em pdf para txt, utilizando algumas métricas pré-estabelecidas no escopo do projeto, e em decorrência disso fo criada uma api que garante esses princípios.
 
-Configuração
+# Configurações
 
 as configurações da API foram definidas no arquivo app.py que utiliza do flask para criar a estratégia de manipulação e envio do arquivo pdf para txt, da lib logging que gera os logs e a werkzeug que serve como ponte entre o app.py com o webserver.
 
@@ -11,7 +11,7 @@ app.config['ALLOWED_EXTENSIONS'] = {'pdf'} = aceita apenas arquivos com a extens
 app.config['LOG_FOLDER'] = './logs' = insere os logs na pasta adequada
 app.config['SERVICE_TOKEN'] = 'SIMULATED_TOKEN' = simula um token para acessar a rota de download do arquivo
 
-Rotas
+# Rotas
 
 /convert/pdf2txt = responsável por converter o arquivo
 '/' = rota inicial
@@ -19,16 +19,29 @@ Rotas
 
 docker
 
-Crie a imagem da docker
+# Crie a imagem da docker
+
 docker build -t image_name
 
-execute o docker
+# execute o docker
+
 docker run -p 5000:5000 image_name
 
 vai estar disponível na rota http://0.0.0.0:5000
 
-execute a aplicação
+# execute a aplicação
+
 python app.py
+
+# observação, para instalar as bibliotecas do requirements.txt sem usar o docker, basta seguir esses comandos dentro da pasta do projeto
+
+python -m venv venv
+
+.\venv\Scripts\Activate.ps1
+
+pip install flask
+pip install logging
+pip install werkzeug
 
 # estrutura do projeto
 

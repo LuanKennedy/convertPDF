@@ -1,0 +1,110 @@
+ 
+ 
+Universidade Presbiteriana Mackenzie  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Faculdade De Computação e Informática  
+Pesquisa Operacional Aplicada  
+ 
+ 
+Luan Kennedy Gomes de Carvalho – 32195125 – 6J1 
+ 
+ 
+ 
+   
+ 
+Exercício 1  
+EXERCÍCIO 1) Em um sistema de 1 fila e um canal foi realizado um levantamento 
+estatístico para a obtenção de dados que possibilitassem o estudo de sua 
+operação. Dois parâmetros foram levantados: • Número médio de clientes na fila: 
+0,9. • Tempo médio gasto por atendimento: 6 min. São conhecidos os seguintes 
+dados adicionais: • Custo unitário de atendimento: R$ 10,00. • Custo unitário de 
+permanência no sistema: R$ 300,00. O custo de ampliação do sistema (mais um 
+ou dois canais de atendimento) é de R$ 14.000,00 por mês, independentemente  
+do número de canais. A empresa considera compensador fazer a ampliação 
+quando a economia mensal for 10% superior ao custo de fazer a ampliação para 
+mais um canal de atendimento. Considere que o sistema opera 22 dias por mês, 
+8 horas por dia. A ampliação d eve ser feita?  
+ 
+Taxa de chegada ( λ): 1 cliente por minuto.  
+Taxa de serviço ( μ): 1/6 clientes por minuto.  
+Custo total para o sistema atual CT: R$ 280,00 por minuto.  
+Custo total para o sistema com um canal adicional ( CT′): R$ 288,00 por minuto.  
+Economia mensal: -R$ 8,00.  
+Conclusão: Com base na análise dos custos, não é recomendada a ampliação 
+do sistema . 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+Exercício 2  
+ 
+Passo 1: Parâmetros do Problema  
+Taxa de chegada (λ): 10 peças por semana.  
+Custo por peça quebrada: R$ 500,00 por semana.  
+Eficiência da Máquina Tipo A (μA): 11 reparos por semana.  
+Eficiência da Máquina Tipo B (μB): 30 reparos por semana.  
+Custo anual da Máquina Tipo A: R$ 80.000,00.  
+Custo anual da Máquina Tipo B: R$ 180.000,00.  
+ 
+Passo  2:  
+Taxa de Serviço Efetiva (μ):  
+Para a Máquina Tipo A: μA = 11 reparos/semana.  
+Para a Máquina Tipo B: μB = 30 reparos/semana.  
+Número de Servidores (c):  
+Para a Máquina Tipo A: cA = 1.  
+Para a Máquina Tipo B: cB = 1.  
+Taxa de Chegada Efetiva (λ'):  
+λ' = λ / c, onde c é o número de servidores.  
+Para ambas as máquinas: λ' = 10 / 1 = 10 peças/semana.  
+ 
+ 
+Passo 3: Custo Total  
+Para a Máquina Tipo A =R$80.000 ,00 
+Para a Máquina Tipo =R$180.000 ,00 
+  
+ 
+Decisão Ótima:  
+Adquirir a Máquina Tipo A.  
+Custos Totais:  
+Máquina Tipo A: R$160.000,00  
+Máquina Tipo B: R$186.000,00  
+Métricas de Desempenho para Máquina Tipo A:  
+Utilização ( ρ): Aproximadamente 90,9%  
+Número Médio de Máquinas em Reparos (L): 110  
+Tempo Médio para Voltar à Produção (W): 1 semana  
+ 
+ 
+ 
+Exercício   3 
+ 
+Comprimento médio da fila  
+Lq =(2)^2 /  2,1 x (3-2) 
+Lq=4/2,1  
+Lq≈1,9048  
+ 
+Tempo médio de espera na  fila 
+ Wq=2/2.1x (3-2) 
+Wq=2/2,1 
+Wq≈0,9524  
+ 
+ 
+Tempo de resposta do sistema  
+W = Wq+1/u 
+W=0,9524 +2,11  
+W≈1,405 
+ 
+ 
+Número médio de clientes no sistema  
+L = 2 x 1,405  
+L≈2,81 
+ 
