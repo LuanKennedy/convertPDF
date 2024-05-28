@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDF Converter</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <h1>PDF Services</h1>
+    <h2>Luan Kennedy Gomes de Carvalho - 10391031 - 7J11</h2>
+    <form id="pdfForm" enctype="multipart/form-data">
+      <input
+        type="file"
+        id="input-file-convert"
+        name="file"
+        accept=".pdf"
+        required
+      />
+      <button type="submit">Convert</button>
+    </form>
+    <div id="result"></div>
+    <div id="download-link" style="margin-top: 20px"></div>
+
+    <script>
+      document
+        .getElementById("pdfForm")
+        .addEventListener("submit", async (event) => {
+          event.preventDefault();
+          const formData = new FormData();
+          const file = document.getElementById("input-file-convert").files[0];
+          formData.append("file", file);
+
+          const response = await fetch("/convert/pdf2txt", {
+            method: "POST",
+            body: formData,
+          });
+
+          const result = await response.json();
+          document.getElementById("result").innerText = JSON.stringify(
+            result,
+            null,
+            2
+          );
+
+          if (result.download_link) {
+            const downloadDiv = document.getElementById("download-link");
+            downloadDiv.innerHTML = `<a href="${result.download_link}" download>Download converted file</a>`;
+          }
+        });
+    </script>
+  </body>
+</html>
